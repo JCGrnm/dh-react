@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+// What happens if no name prop is passed to the Welcome component?
+//Can you set a default value for the name prop ?
+// 1 - it returns undefined
+// 2 - yes, by adding a default name prop
+
+import React from "react";
+
+class Welcome extends React.Component {
+  render() {
+    const { name } = this.props;
+    return <p>Welcome, {name}!</p>;
+  }
+}
+
+Welcome.defaultProps = {
+  name: "our esteemed User",
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Welcome />
     </div>
   );
 }

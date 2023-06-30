@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+class Welcome extends React.Component {
+  render() {
+    const { name, age } = this.props;
+    return (
+      <div>
+        <p>Welcome, {name}!</p>
+        <p>Your age is {age}.</p>
+      </div>
+    );
+  }
+}
+
+Welcome.defaultProps = {
+  name: "our esteemed User",
+  age: "...?",
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Welcome />
     </div>
   );
 }

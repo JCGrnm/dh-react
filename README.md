@@ -1,3 +1,9 @@
+## ASSIGNMENT INSTRUCTIONS:<br>
+What happens if no `name` prop is passed to the `Welcome` component? Can you set a default value for the `name` prop?
+
+***
+***
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

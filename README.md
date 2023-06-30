@@ -1,3 +1,8 @@
+## ASSIGNMENT INSTRUCTIONS:<br>
+Modify the `Welcome` component so that it receives a second prop called `age` and renders it below the 'welcome' message, within a `p` tag after the message `"Your age is "`.
+***
+***
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

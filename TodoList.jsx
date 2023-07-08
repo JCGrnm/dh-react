@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 
-class TodoList extends Component {
+class TodoList extends React.Component {
   state = {
     items: [],
     inputValue: "", //RESET TO ZERO

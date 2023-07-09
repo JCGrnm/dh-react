@@ -8,24 +8,25 @@
 //which can be done using the class property syntax.
 
 import React from "react";
-import { CounterDisplay } from "./CounterDisplay";
+import CounterDisplay from "./CounterDisplay";
 
-export class Counter extends React.Component {
-  state = {
-    count: this.props.initialValue,
-  };
-  componentDidMount() {
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: this.props.initialCount,
+    };
+
     setInterval(() => {
-      this.setState((state) => {
-        return { count: state.count + this.props.incrementAmount };
-      });
-    }, this.props.incrementInterval);
+      this.setState((prevState) => ({
+        count: prevState.count + this.props.increment,
+      }));
+    }, this.props.interval);
   }
-  componentWillUnmount() {
-    clearInterval(this.timeout);
-  }
+
   render() {
-    return <CounterDisplay counter={this.state.count} />;
+    return <CounterDisplay count={this.state.count} />;
   }
 }
+
 export default Counter;

@@ -14,11 +14,13 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<InteractiveWelcome />} />
           <Route path="/counter" element={<Counter initialValue={0} />} />
-          <Route path="/users" element={<GithubUserList />} />
-          <Route path="/users/:username" element={<ShowGithubUser />} />
+          <Route path="/users" element={<GithubUserList />}>
+            <Route path=":username" element={<ShowGithubUser />} />
+          </Route>
           <Route path="*" element={<h1>We apologize, page not found</h1>} />
         </Routes>
       </div>
     </>
   );
 };
+
